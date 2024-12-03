@@ -15,6 +15,9 @@
 		E68280F62CFE9CFC00752888 /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280F52CFE9CFC00752888 /* UserJSON.swift */; };
 		E68280FA2CFE9E5000752888 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280F92CFE9E5000752888 /* UserViewModel.swift */; };
 		E68280FC2CFE9EA400752888 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280FB2CFE9EA400752888 /* UserView.swift */; };
+		E68280FF2CFEA37300752888 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280FE2CFEA37300752888 /* ImagePicker.swift */; };
+		E68281012CFEA3EB00752888 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68281002CFEA3EB00752888 /* UserManager.swift */; };
+		E68281052CFEA49C00752888 /* UploadProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68281042CFEA49C00752888 /* UploadProfilePhoto.swift */; };
 		E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */; };
 		E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */; };
 		E6A5B7CA2CFE071E0001C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */; };
@@ -59,6 +62,10 @@
 		E68280F52CFE9CFC00752888 /* UserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
 		E68280F92CFE9E5000752888 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E68280FB2CFE9EA400752888 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E68280FE2CFEA37300752888 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E68281002CFEA3EB00752888 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E68281042CFEA49C00752888 /* UploadProfilePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePhoto.swift; sourceTree = "<group>"; };
+		E68281062CFEA4F700752888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameApp.swift; sourceTree = "<group>"; };
 		E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E68280F52CFE9CFC00752888 /* UserJSON.swift */,
+				E68281002CFEA3EB00752888 /* UserManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,8 +160,17 @@
 			isa = PBXGroup;
 			children = (
 				E68280FB2CFE9EA400752888 /* UserView.swift */,
+				E68281042CFEA49C00752888 /* UploadProfilePhoto.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E68280FD2CFEA36900752888 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E68280FE2CFEA37300752888 /* ImagePicker.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E6A5B7B92CFE071C0001C8A7 = {
@@ -182,6 +199,8 @@
 		E6A5B7C42CFE071C0001C8A7 /* SocioGame */ = {
 			isa = PBXGroup;
 			children = (
+				E68281062CFEA4F700752888 /* Info.plist */,
+				E68280FD2CFEA36900752888 /* Helper */,
 				E68280F82CFE9D2700752888 /* View */,
 				E68280F72CFE9D1E00752888 /* ViewModel */,
 				E68280F42CFE9CEA00752888 /* Model */,
@@ -464,7 +483,10 @@
 			files = (
 				E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */,
 				E68280FA2CFE9E5000752888 /* UserViewModel.swift in Sources */,
+				E68281012CFEA3EB00752888 /* UserManager.swift in Sources */,
+				E68281052CFEA49C00752888 /* UploadProfilePhoto.swift in Sources */,
 				E68280FC2CFE9EA400752888 /* UserView.swift in Sources */,
+				E68280FF2CFEA37300752888 /* ImagePicker.swift in Sources */,
 				E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */,
 				E68280F62CFE9CFC00752888 /* UserJSON.swift in Sources */,
 			);
@@ -579,6 +601,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -706,6 +729,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -840,6 +864,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -967,6 +992,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1157,6 +1183,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1188,6 +1215,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SocioGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

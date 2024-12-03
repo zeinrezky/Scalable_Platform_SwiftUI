@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            UserView()
+            UserView(userId: "7inLAHiTAkmJ1k1Nh98n").environmentObject(UserManager.shared)
         }
         .padding()
     }

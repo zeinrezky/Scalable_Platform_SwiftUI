@@ -10,6 +10,7 @@ import Firebase
 
 @main
 struct SocioGameApp: App {
+    @StateObject var userManager = UserManager()
     
     /// Initialize the Firebase configuration
     init() {
@@ -29,7 +30,7 @@ struct SocioGameApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UploadProfilePhoto().environmentObject(userManager)
         }
     }
 }
