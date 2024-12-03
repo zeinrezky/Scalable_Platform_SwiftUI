@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserView: View {
+    
+    @StateObject private var viewModel = UserViewModel()
+    
     var body: some View {
         VStack(spacing: 16) {
             // Profile Image Section
@@ -36,9 +39,14 @@ struct UserView: View {
 
             // Name, Status, and Social Media
             HStack(spacing: 8) {
-                Text("Zynx")
-                    .font(.title)
-                    .bold()
+                if let user = viewModel.user {
+                    
+                    Text("\(user.uid ?? "N/A")")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.primary) // Adapts to Dark Mode
+                }
+
 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(.blue)
@@ -54,12 +62,12 @@ struct UserView: View {
 
             // Game Badges
             HStack(spacing: 8) {
-                Image("mushroom")
+                Image("dice")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
 
-                Image("dice")
+                Image("mushroom")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
@@ -68,7 +76,7 @@ struct UserView: View {
                     .font(.caption)
                     .bold()
                     .frame(width: 50, height: 50)
-                    .background(Color.black)
+                    .background(Color.black.opacity(0.7))
                     .foregroundColor(.white)
                     .clipShape(Circle())
             }
@@ -81,8 +89,9 @@ struct UserView: View {
                         .foregroundColor(.yellow)
                     Text("4.9")
                         .bold()
+                        .foregroundColor(.primary) // Adapts to Dark Mode
                     Text("(61)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary) // Adapts to Dark Mode
                 }
 
                 Spacer()
@@ -93,21 +102,16 @@ struct UserView: View {
                     Text("110.00/1Hr")
                         .font(.headline)
                         .bold()
+                        .foregroundColor(.primary) // Adapts to Dark Mode
                 }
             }
             .padding(.horizontal)
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(Color(.systemBackground)) // Adapts to Light or Dark mode
         .cornerRadius(20)
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
         .frame(maxWidth: .infinity, alignment: .center)
         .padding()
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView()
     }
 }
