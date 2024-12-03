@@ -31,7 +31,6 @@ struct SocioGameApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            UploadProfilePhoto().environmentObject(userManager)
         }
     }
 }

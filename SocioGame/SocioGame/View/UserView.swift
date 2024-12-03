@@ -6,25 +6,42 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UserView: View {
-    
     @StateObject private var viewModel = UserViewModel()
-    
+    @State private var isImagePickerPresented = false
+    @State private var selectedImage: UIImage? = nil
+    @State private var uploadStatus: String = ""
+
     var body: some View {
         VStack(spacing: 16) {
+            
             // Profile Image Section
             ZStack(alignment: .top) {
-                Image("profile")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 150, height: 150)
-                    .clipShape(Circle())
-                    .overlay(
-                        Circle()
-                            .stroke(Color.white, lineWidth: 4)
-                    )
-                    .shadow(radius: 10)
+                if let selectedImage = selectedImage {
+                    Image(uiImage: selectedImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 4)
+                        )
+                        .shadow(radius: 10)
+                } else {
+                    Image("profile")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 4)
+                        )
+                        .shadow(radius: 10)
+                }
 
                 // Badge - Available Today
                 Text("⚡ Available today!")
@@ -36,17 +53,18 @@ struct UserView: View {
                     .clipShape(Capsule())
                     .offset(y: -10)
             }
+            .onTapGesture {
+                isImagePickerPresented = true // Open ImagePicker
+            }
 
             // Name, Status, and Social Media
             HStack(spacing: 8) {
                 if let user = viewModel.user {
-                    
                     Text("\(user.uid ?? "N/A")")
                         .font(.title)
                         .bold()
                         .foregroundColor(.primary) // Adapts to Dark Mode
                 }
-
 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(.blue)
@@ -113,5 +131,8 @@ struct UserView: View {
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
         .frame(maxWidth: .infinity, alignment: .center)
         .padding()
+        .sheet(isPresented: $isImagePickerPresented) {
+            ImagePicker(selectedImage: $selectedImage) // Open ImagePicker
+        }
     }
 }

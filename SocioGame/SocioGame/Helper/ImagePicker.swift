@@ -67,6 +67,18 @@ struct ImagePicker: UIViewControllerRepresentable {
                 DispatchQueue.main.async {
                     self.parent.selectedImage = image as? UIImage
                 }
+                if let userId = getCurrentUserId() {
+                    uploadProfileImageWithBackgroundSupport(image as? UIImage ?? UIImage(), userId: userId) { result in
+                        DispatchQueue.main.async {
+                            switch result {
+                            case .success(let url):
+                                print("Upload successful! File URL: \(url)")
+                            case .failure(let error):
+                                print("Upload failed: \(error.localizedDescription)")
+                            }
+                        }
+                    }
+                }
             }
         }
     }
