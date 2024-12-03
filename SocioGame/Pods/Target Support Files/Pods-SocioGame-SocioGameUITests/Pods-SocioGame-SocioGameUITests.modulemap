@@ -1,0 +1,6 @@
+framework module Pods_SocioGame_SocioGameUITests {
+  umbrella header "Pods-SocioGame-SocioGameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

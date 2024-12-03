@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23FE0A57ECFFCFB5B74DF2B2 /* Pods_SocioGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A000B50569D5094C56CD1EFC /* Pods_SocioGameTests.framework */; };
+		9E7AED21A368C455846F9C9F /* Pods_SocioGame_SocioGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F796EAE45302202062AA0F /* Pods_SocioGame_SocioGameUITests.framework */; };
+		C419A66BD5526C1EE5FA1DEE /* Pods_SocioGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989D2065EDCE9C25B52D2005 /* Pods_SocioGame.framework */; };
+		E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */; };
+		E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */; };
+		E6A5B7CA2CFE071E0001C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */; };
+		E6A5B7CD2CFE071E0001C8A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7CC2CFE071E0001C8A7 /* Preview Assets.xcassets */; };
+		E6A5B7D72CFE071F0001C8A7 /* SocioGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7D62CFE071F0001C8A7 /* SocioGameTests.swift */; };
+		E6A5B7E12CFE071F0001C8A7 /* SocioGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7E02CFE071F0001C8A7 /* SocioGameUITests.swift */; };
+		E6A5B7E32CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */; };
+		E6A5B7F02CFE077C0001C8A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6A5B7D32CFE071F0001C8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6A5B7BA2CFE071C0001C8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6A5B7C12CFE071C0001C8A7;
+			remoteInfo = SocioGame;
+		};
+		E6A5B7DD2CFE071F0001C8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6A5B7BA2CFE071C0001C8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6A5B7C12CFE071C0001C8A7;
+			remoteInfo = SocioGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40EB4F010056FDE10C6B8637 /* Pods-SocioGame-SocioGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGame-SocioGameUITests.release.xcconfig"; path = "Target Support Files/Pods-SocioGame-SocioGameUITests/Pods-SocioGame-SocioGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		41F796EAE45302202062AA0F /* Pods_SocioGame_SocioGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocioGame_SocioGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49380D0175B047F1807D3814 /* Pods-SocioGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGame.debug.xcconfig"; path = "Target Support Files/Pods-SocioGame/Pods-SocioGame.debug.xcconfig"; sourceTree = "<group>"; };
+		95EC14BCD8B1A817CCCB1455 /* Pods-SocioGame-SocioGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGame-SocioGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocioGame-SocioGameUITests/Pods-SocioGame-SocioGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		989D2065EDCE9C25B52D2005 /* Pods_SocioGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocioGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A000B50569D5094C56CD1EFC /* Pods_SocioGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocioGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FA3DF534C2099C22E4EA63 /* Pods-SocioGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGame.release.xcconfig"; path = "Target Support Files/Pods-SocioGame/Pods-SocioGame.release.xcconfig"; sourceTree = "<group>"; };
+		B7FB8DD18A17F53EF8DB93A3 /* Pods-SocioGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGameTests.debug.xcconfig"; path = "Target Support Files/Pods-SocioGameTests/Pods-SocioGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2D0B0D55E7C9ECCB94BFE35 /* Pods-SocioGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocioGameTests.release.xcconfig"; path = "Target Support Files/Pods-SocioGameTests/Pods-SocioGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameApp.swift; sourceTree = "<group>"; };
+		E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6A5B7CC2CFE071E0001C8A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6A5B7D22CFE071F0001C8A7 /* SocioGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocioGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A5B7D62CFE071F0001C8A7 /* SocioGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameTests.swift; sourceTree = "<group>"; };
+		E6A5B7DC2CFE071F0001C8A7 /* SocioGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocioGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A5B7E02CFE071F0001C8A7 /* SocioGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameUITests.swift; sourceTree = "<group>"; };
+		E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6A5B7BF2CFE071C0001C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C419A66BD5526C1EE5FA1DEE /* Pods_SocioGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7CF2CFE071F0001C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FE0A57ECFFCFB5B74DF2B2 /* Pods_SocioGameTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7D92CFE071F0001C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E7AED21A368C455846F9C9F /* Pods_SocioGame_SocioGameUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B41738AFD269B9A75B13E1E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				989D2065EDCE9C25B52D2005 /* Pods_SocioGame.framework */,
+				41F796EAE45302202062AA0F /* Pods_SocioGame_SocioGameUITests.framework */,
+				A000B50569D5094C56CD1EFC /* Pods_SocioGameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D61E7C5A8A6805EE64DC42E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49380D0175B047F1807D3814 /* Pods-SocioGame.debug.xcconfig */,
+				A1FA3DF534C2099C22E4EA63 /* Pods-SocioGame.release.xcconfig */,
+				95EC14BCD8B1A817CCCB1455 /* Pods-SocioGame-SocioGameUITests.debug.xcconfig */,
+				40EB4F010056FDE10C6B8637 /* Pods-SocioGame-SocioGameUITests.release.xcconfig */,
+				B7FB8DD18A17F53EF8DB93A3 /* Pods-SocioGameTests.debug.xcconfig */,
+				C2D0B0D55E7C9ECCB94BFE35 /* Pods-SocioGameTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6A5B7B92CFE071C0001C8A7 = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7C42CFE071C0001C8A7 /* SocioGame */,
+				E6A5B7D52CFE071F0001C8A7 /* SocioGameTests */,
+				E6A5B7DF2CFE071F0001C8A7 /* SocioGameUITests */,
+				E6A5B7C32CFE071C0001C8A7 /* Products */,
+				D61E7C5A8A6805EE64DC42E6 /* Pods */,
+				B41738AFD269B9A75B13E1E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6A5B7C32CFE071C0001C8A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */,
+				E6A5B7D22CFE071F0001C8A7 /* SocioGameTests.xctest */,
+				E6A5B7DC2CFE071F0001C8A7 /* SocioGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6A5B7C42CFE071C0001C8A7 /* SocioGame */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */,
+				E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */,
+				E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */,
+				E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */,
+				E6A5B7CB2CFE071E0001C8A7 /* Preview Content */,
+			);
+			path = SocioGame;
+			sourceTree = "<group>";
+		};
+		E6A5B7CB2CFE071E0001C8A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7CC2CFE071E0001C8A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6A5B7D52CFE071F0001C8A7 /* SocioGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7D62CFE071F0001C8A7 /* SocioGameTests.swift */,
+			);
+			path = SocioGameTests;
+			sourceTree = "<group>";
+		};
+		E6A5B7DF2CFE071F0001C8A7 /* SocioGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5B7E02CFE071F0001C8A7 /* SocioGameUITests.swift */,
+				E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */,
+			);
+			path = SocioGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6A5B7C12CFE071C0001C8A7 /* SocioGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A5B7E62CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGame" */;
+			buildPhases = (
+				6BA259A6F6CD5EDFBA021704 /* [CP] Check Pods Manifest.lock */,
+				E6A5B7BE2CFE071C0001C8A7 /* Sources */,
+				E6A5B7BF2CFE071C0001C8A7 /* Frameworks */,
+				E6A5B7C02CFE071C0001C8A7 /* Resources */,
+				1D27FAA61465597BD5B9C519 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocioGame;
+			productName = SocioGame;
+			productReference = E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6A5B7D12CFE071F0001C8A7 /* SocioGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A5B7E92CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGameTests" */;
+			buildPhases = (
+				EF836B7C090574BDBB63FA4A /* [CP] Check Pods Manifest.lock */,
+				E6A5B7CE2CFE071F0001C8A7 /* Sources */,
+				E6A5B7CF2CFE071F0001C8A7 /* Frameworks */,
+				E6A5B7D02CFE071F0001C8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6A5B7D42CFE071F0001C8A7 /* PBXTargetDependency */,
+			);
+			name = SocioGameTests;
+			productName = SocioGameTests;
+			productReference = E6A5B7D22CFE071F0001C8A7 /* SocioGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6A5B7DB2CFE071F0001C8A7 /* SocioGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6A5B7EC2CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGameUITests" */;
+			buildPhases = (
+				97640363C5DA1AC535DE6F97 /* [CP] Check Pods Manifest.lock */,
+				E6A5B7D82CFE071F0001C8A7 /* Sources */,
+				E6A5B7D92CFE071F0001C8A7 /* Frameworks */,
+				E6A5B7DA2CFE071F0001C8A7 /* Resources */,
+				F0480A06A9C1476E1F77CD33 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6A5B7DE2CFE071F0001C8A7 /* PBXTargetDependency */,
+			);
+			name = SocioGameUITests;
+			productName = SocioGameUITests;
+			productReference = E6A5B7DC2CFE071F0001C8A7 /* SocioGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6A5B7BA2CFE071C0001C8A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E6A5B7C12CFE071C0001C8A7 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E6A5B7D12CFE071F0001C8A7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E6A5B7C12CFE071C0001C8A7;
+					};
+					E6A5B7DB2CFE071F0001C8A7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = E6A5B7C12CFE071C0001C8A7;
+					};
+				};
+			};
+			buildConfigurationList = E6A5B7BD2CFE071C0001C8A7 /* Build configuration list for PBXProject "SocioGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6A5B7B92CFE071C0001C8A7;
+			productRefGroup = E6A5B7C32CFE071C0001C8A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6A5B7C12CFE071C0001C8A7 /* SocioGame */,
+				E6A5B7D12CFE071F0001C8A7 /* SocioGameTests */,
+				E6A5B7DB2CFE071F0001C8A7 /* SocioGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6A5B7C02CFE071C0001C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A5B7CD2CFE071E0001C8A7 /* Preview Assets.xcassets in Resources */,
+				E6A5B7CA2CFE071E0001C8A7 /* Assets.xcassets in Resources */,
+				E6A5B7F02CFE077C0001C8A7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7D02CFE071F0001C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7DA2CFE071F0001C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D27FAA61465597BD5B9C519 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocioGame/Pods-SocioGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocioGame/Pods-SocioGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocioGame/Pods-SocioGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BA259A6F6CD5EDFBA021704 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocioGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97640363C5DA1AC535DE6F97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocioGame-SocioGameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF836B7C090574BDBB63FA4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocioGameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0480A06A9C1476E1F77CD33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocioGame-SocioGameUITests/Pods-SocioGame-SocioGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocioGame-SocioGameUITests/Pods-SocioGame-SocioGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocioGame-SocioGameUITests/Pods-SocioGame-SocioGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6A5B7BE2CFE071C0001C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */,
+				E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7CE2CFE071F0001C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A5B7D72CFE071F0001C8A7 /* SocioGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6A5B7D82CFE071F0001C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A5B7E32CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift in Sources */,
+				E6A5B7E12CFE071F0001C8A7 /* SocioGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6A5B7D42CFE071F0001C8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6A5B7C12CFE071C0001C8A7 /* SocioGame */;
+			targetProxy = E6A5B7D32CFE071F0001C8A7 /* PBXContainerItemProxy */;
+		};
+		E6A5B7DE2CFE071F0001C8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6A5B7C12CFE071C0001C8A7 /* SocioGame */;
+			targetProxy = E6A5B7DD2CFE071F0001C8A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E6A5B7E42CFE071F0001C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6A5B7E52CFE071F0001C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6A5B7E72CFE071F0001C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49380D0175B047F1807D3814 /* Pods-SocioGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SocioGame/Preview Content\"";
+				DEVELOPMENT_TEAM = 98U6629M65;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6A5B7E82CFE071F0001C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FA3DF534C2099C22E4EA63 /* Pods-SocioGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SocioGame/Preview Content\"";
+				DEVELOPMENT_TEAM = 98U6629M65;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6A5B7EA2CFE071F0001C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7FB8DD18A17F53EF8DB93A3 /* Pods-SocioGameTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FMBNG35Z38;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocioGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SocioGame";
+			};
+			name = Debug;
+		};
+		E6A5B7EB2CFE071F0001C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D0B0D55E7C9ECCB94BFE35 /* Pods-SocioGameTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FMBNG35Z38;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocioGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SocioGame";
+			};
+			name = Release;
+		};
+		E6A5B7ED2CFE071F0001C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EC14BCD8B1A817CCCB1455 /* Pods-SocioGame-SocioGameUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FMBNG35Z38;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SocioGame;
+			};
+			name = Debug;
+		};
+		E6A5B7EE2CFE071F0001C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40EB4F010056FDE10C6B8637 /* Pods-SocioGame-SocioGameUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FMBNG35Z38;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ZeinChandra.SocioGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SocioGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6A5B7BD2CFE071C0001C8A7 /* Build configuration list for PBXProject "SocioGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A5B7E42CFE071F0001C8A7 /* Debug */,
+				E6A5B7E52CFE071F0001C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A5B7E62CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A5B7E72CFE071F0001C8A7 /* Debug */,
+				E6A5B7E82CFE071F0001C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A5B7E92CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A5B7EA2CFE071F0001C8A7 /* Debug */,
+				E6A5B7EB2CFE071F0001C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6A5B7EC2CFE071F0001C8A7 /* Build configuration list for PBXNativeTarget "SocioGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6A5B7ED2CFE071F0001C8A7 /* Debug */,
+				E6A5B7EE2CFE071F0001C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6A5B7BA2CFE071C0001C8A7 /* Project object */;
+}

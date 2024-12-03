@@ -1,0 +1,6 @@
+framework module Pods_SocioGame {
+  umbrella header "Pods-SocioGame-umbrella.h"
+
+  export *
+  module * { export * }
+}
