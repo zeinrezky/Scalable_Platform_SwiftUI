@@ -26,4 +26,6 @@ struct UserJSON: Codable {
     var email: String?
     var phoneNumber: String?
     var gender: GenderEnum?
+    var servicePricing: Double?
+    var rating: Double?
 }
