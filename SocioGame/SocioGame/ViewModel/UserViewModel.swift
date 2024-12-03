@@ -15,13 +15,12 @@ import Combine
 /// ViewModel for managing user-related data and interactions with Firebase.
 class UserViewModel: ObservableObject {
     
-    @Published var users: [UserJSON] = [] // Array to store fetched users
-    
-    @Published var user: UserJSON? // Published user data object for SwiftUI binding.
-    @Published var profileImageURL: URL? // Published profile image URL for SwiftUI binding.
+    @Published var users: [UserJSON] = []
+    @Published var user: UserJSON?
+    @Published var profileImageURL: URL?
 
-    private var userManager = UserManager.shared // Shared user manager instance.
-    private let db = Firestore.firestore() // Firestore database reference.
+    private var userManager = UserManager.shared
+    private let db = Firestore.firestore()
 
     /// Fetches user data from Firestore based on the user ID.
     ///
@@ -55,11 +54,10 @@ class UserViewModel: ObservableObject {
         // Query for lowest service pricing in ascending order
         let lowestServicePricingQuery = db.collection("USERS").order(by: "servicePricing", descending: true)
 
-        // Execute all queries
         let queries = [recentlyActiveQuery, highestRatingQuery, isFemaleQuery, lowestServicePricingQuery]
-        var results: [[UserJSON]] = [] // Store results for each query
+        var results: [[UserJSON]] = []
 
-        let dispatchGroup = DispatchGroup() // Group to handle multiple queries
+        let dispatchGroup = DispatchGroup()
 
         for query in queries {
             dispatchGroup.enter()
@@ -84,9 +82,7 @@ class UserViewModel: ObservableObject {
             }
         }
 
-        // Once all queries complete, update the main array
         dispatchGroup.notify(queue: .main) {
-            // Combine all results into one array (if needed)
             self.users = results.flatMap { $0 }
         }
     }
