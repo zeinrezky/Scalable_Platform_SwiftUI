@@ -12,6 +12,9 @@
 		C419A66BD5526C1EE5FA1DEE /* Pods_SocioGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989D2065EDCE9C25B52D2005 /* Pods_SocioGame.framework */; };
 		E68280E22CFE9AC300752888 /* GoogleService-Info-Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68280E02CFE9AC300752888 /* GoogleService-Info-Staging.plist */; };
 		E68280E32CFE9AC300752888 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68280E12CFE9AC300752888 /* GoogleService-Info-Dev.plist */; };
+		E68280F62CFE9CFC00752888 /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280F52CFE9CFC00752888 /* UserJSON.swift */; };
+		E68280FA2CFE9E5000752888 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280F92CFE9E5000752888 /* UserViewModel.swift */; };
+		E68280FC2CFE9EA400752888 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280FB2CFE9EA400752888 /* UserView.swift */; };
 		E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */; };
 		E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */; };
 		E6A5B7CA2CFE071E0001C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		E68280DF2CFE9A6900752888 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		E68280E02CFE9AC300752888 /* GoogleService-Info-Staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Staging.plist"; sourceTree = "<group>"; };
 		E68280E12CFE9AC300752888 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		E68280F52CFE9CFC00752888 /* UserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
+		E68280F92CFE9E5000752888 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		E68280FB2CFE9EA400752888 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameApp.swift; sourceTree = "<group>"; };
 		E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,30 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		E68280F42CFE9CEA00752888 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E68280F52CFE9CFC00752888 /* UserJSON.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E68280F72CFE9D1E00752888 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E68280F92CFE9E5000752888 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E68280F82CFE9D2700752888 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E68280FB2CFE9EA400752888 /* UserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E6A5B7B92CFE071C0001C8A7 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +182,9 @@
 		E6A5B7C42CFE071C0001C8A7 /* SocioGame */ = {
 			isa = PBXGroup;
 			children = (
+				E68280F82CFE9D2700752888 /* View */,
+				E68280F72CFE9D1E00752888 /* ViewModel */,
+				E68280F42CFE9CEA00752888 /* Model */,
 				E68280E12CFE9AC300752888 /* GoogleService-Info-Dev.plist */,
 				E68280E02CFE9AC300752888 /* GoogleService-Info-Staging.plist */,
 				E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */,
@@ -430,7 +463,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */,
+				E68280FA2CFE9E5000752888 /* UserViewModel.swift in Sources */,
+				E68280FC2CFE9EA400752888 /* UserView.swift in Sources */,
 				E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */,
+				E68280F62CFE9CFC00752888 /* UserJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
