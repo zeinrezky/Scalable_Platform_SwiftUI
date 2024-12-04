@@ -27,6 +27,7 @@
 		E6A5B7E32CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */; };
 		E6A5B7F02CFE077C0001C8A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */; };
 		E6E339262CFFF1C0007BABD1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E339252CFFF1C0007BABD1 /* Global.swift */; };
+		E6E339282D001B69007BABD1 /* Readme-Interview-Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E339272D001B69007BABD1 /* Readme-Interview-Answers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E6E339252CFFF1C0007BABD1 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		E6E339272D001B69007BABD1 /* Readme-Interview-Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Readme-Interview-Answers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		E6A5B7B92CFE071C0001C8A7 = {
 			isa = PBXGroup;
 			children = (
+				E6E339272D001B69007BABD1 /* Readme-Interview-Answers.swift */,
 				E68280DD2CFE9A2000752888 /* Configurations */,
 				E6A5B7C42CFE071C0001C8A7 /* SocioGame */,
 				E6A5B7D52CFE071F0001C8A7 /* SocioGameTests */,
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */,
+				E6E339282D001B69007BABD1 /* Readme-Interview-Answers.swift in Sources */,
 				E68280FA2CFE9E5000752888 /* UserViewModel.swift in Sources */,
 				E68281012CFEA3EB00752888 /* UserManager.swift in Sources */,
 				E68281052CFEA49C00752888 /* UploadProfilePhoto.swift in Sources */,
