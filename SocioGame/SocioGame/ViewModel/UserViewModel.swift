@@ -28,33 +28,36 @@ class UserViewModel: ObservableObject {
     func fetchUserData(userId: String) {
         let db = Firestore.firestore()
         db.collection("USERS").document(userId).getDocument { [self] snapshot, error in
-            guard let data = snapshot?.data(), error == nil else { return }
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
 
             userManager.user = UserJSON(
                 uid: data["uid"] as? String,
+                name: data["name"] as? String,
                 email: data["email"] as? String,
                 phoneNumber: data["phoneNumber"] as? String,
-                gender: GenderEnum(rawValue: data["gender"] as? Int ?? -1)
+                gender: GenderEnum(rawValue: data["gender"] as? Int ?? -1),
+                servicePricing: data["servicePricing"] as? Double,
+                rating: data["rating"] as? Double,
+                ratingCount: data["ratingCount"] as? Int,
+                lastActive: data["lastActive"] as? String,
+                profileImageBase64: data["profileImageBase64"] as? String
             )
+            user = userManager.user
+            
+            // updating last active
+            updateLastActive(userId: userId)
         }
     }
     
     /// Fetch multiple queries from the USERS collection
     func fetchFilteredUsers() {
         
-        // Query for recently active users in descending order
-        let recentlyActiveQuery = db.collection("USERS").order(by: "lastActive", descending: true)
-
-        // Query for highest rating in descending order
-        let highestRatingQuery = db.collection("USERS").order(by: "rating", descending: true)
-
         // Query for females only
-        let isFemaleQuery = db.collection("USERS").whereField("gender", isEqualTo: GenderEnum.female.rawValue)
+        let isFemaleQuery = db.collection("USERS").whereField("gender", isEqualTo: GenderEnum.female.rawValue).order(by: "lastActive", descending: true).order(by: "rating", descending: true).order(by: "servicePricing", descending: false)
 
-        // Query for lowest service pricing in ascending order
-        let lowestServicePricingQuery = db.collection("USERS").order(by: "servicePricing", descending: true)
-
-        let queries = [recentlyActiveQuery, highestRatingQuery, isFemaleQuery, lowestServicePricingQuery]
+        let queries = [isFemaleQuery]
         var results: [[UserJSON]] = []
 
         let dispatchGroup = DispatchGroup()
@@ -66,14 +69,18 @@ class UserViewModel: ObservableObject {
                     print("Error fetching query: \(error.localizedDescription)")
                 } else if let documents = snapshot?.documents {
                     let users = documents.compactMap { doc -> UserJSON? in
-                        guard let data = doc.data() as? [String: Any] else { return nil }
+                        let data: [String: Any] = doc.data()
                         return UserJSON(
                             uid: data["uid"] as? String,
+                            name: data["name"] as? String,
                             email: data["email"] as? String,
                             phoneNumber: data["phoneNumber"] as? String,
                             gender: GenderEnum(rawValue: data["gender"] as? Int ?? -1),
                             servicePricing: data["servicePricing"] as? Double,
-                            rating: data["rating"] as? Double
+                            rating: data["rating"] as? Double,
+                            ratingCount: data["ratingCount"] as? Int,
+                            lastActive: data["lastActive"] as? String,
+                            profileImageBase64: data["profileImageBase64"] as? String
                         )
                     }
                     results.append(users)
@@ -121,7 +128,6 @@ func uploadProfileImageWithBackgroundSupport(
         completion(.failure(NSError(domain: "Invalid image data", code: 0, userInfo: nil)))
         return
     }
-
     let storageRef = Storage.storage().reference().child("profile_images/\(userId).jpg")
     let uploadTask = storageRef.putData(imageData, metadata: nil) { metadata, error in
         if let error = error {
@@ -154,3 +160,26 @@ func uploadProfileImageWithBackgroundSupport(
         print("Upload failed")
     }
 }
+
+/// Update last active datetime of a user  from Firestore based on the user ID.
+///
+/// - Parameter userId: The unique identifier for the user.
+func updateLastActive(userId: String) {
+    let db = Firestore.firestore()
+    db.collection("USERS").document(userId).updateData([
+        "lastActive": dateFormatter.string(from: Date())
+    ])
+}
+
+/// Update last active datetime of a user  from Firestore based on the user ID.
+///
+/// - Parameter userId: The unique identifier for the user.
+func uploadProfileImage(userId: String, profileImage: UIImage) {
+    let db = Firestore.firestore()
+    DispatchQueue.main.async {
+        db.collection("USERS").document(userId).updateData([
+            "profileImageBase64": imageToBase64(image: profileImage) ?? ""
+        ])
+    }
+}
+

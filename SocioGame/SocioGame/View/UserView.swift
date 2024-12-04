@@ -11,128 +11,185 @@ import PhotosUI
 struct UserView: View {
     @StateObject private var viewModel = UserViewModel()
     @State private var isImagePickerPresented = false
+    @State private var selectedImageNew: UIImage? = nil
     @State private var selectedImage: UIImage? = nil
     @State private var uploadStatus: String = ""
-
+    @State private var landingPageDismiss = false
+   
     var body: some View {
-        VStack(spacing: 16) {
+        GeometryReader { geometry in
             
-            // Profile Image Section
-            ZStack(alignment: .top) {
-                if let selectedImage = selectedImage {
-                    Image(uiImage: selectedImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 150, height: 150)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 4)
-                        )
-                        .shadow(radius: 10)
-                } else {
-                    Image("profile")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 150, height: 150)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 4)
-                        )
-                        .shadow(radius: 10)
-                }
-
-                // Badge - Available Today
-                Text("⚡ Available today!")
-                    .font(.caption)
-                    .bold()
-                    .padding(6)
-                    .background(Color.gray.opacity(0.7))
-                    .foregroundColor(.white)
-                    .clipShape(Capsule())
-                    .offset(y: -10)
-            }
-            .onTapGesture {
-                isImagePickerPresented = true // Open ImagePicker
-            }
-
-            // Name, Status, and Social Media
-            HStack(spacing: 8) {
+            VStack(spacing: 10) {
+                // Name, Status, and Social Media
                 if let user = viewModel.user {
-                    Text("\(user.uid ?? "N/A")")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.primary) // Adapts to Dark Mode
+                    HStack(spacing: 8) {
+                        Spacer()
+                        Text("\(user.name ?? "N/A")")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.primary) // Adapts to Dark Mode
+                        
+                        Image(systemName: "circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.green)
+                                    .frame(width: 15, height: 15)
+                        
+                        Spacer()
+
+                        Image(systemName: "checkmark.seal.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.blue)
+
+                        Image("instagram")
+                            .renderingMode(.template) // Render image logo as template so it can use foregroundColor
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.primary)
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    
+                    // Profile Image Section
+                    ZStack(alignment: .top) {
+                        if let selectedImage {
+                            Image(uiImage: selectedImage)
+                                .resizable()
+                                .frame(height: geometry.size.height / 1.5)
+                                .scaledToFit()
+                                .clipShape(Rectangle()).cornerRadius(20)
+                                .shadow(radius: 10)
+                        } else {
+                            Image("profile")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Rectangle()).cornerRadius(20)
+                                .shadow(radius: 10)
+                        }
+
+                        // Badge - Available Today
+                        Text("⚡ Available today!")
+                            .font(.title3)
+                            .padding()
+                            .background(
+                                BlurView(style: .systemUltraThinMaterialDark) // Blur effect
+                            )
+                            .foregroundColor(.white)
+                            .clipShape(Capsule())
+                            .offset(y: 20)
+                            
+                    }
+                    .padding(.top, 20)
+                    .onTapGesture {
+                        isImagePickerPresented = true // Open ImagePicker
+                    }
+
+                    // Game Badges
+                    HStack {
+                        Image("dice")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .overlay(
+                                Circle()
+                                .strokeBorder(Color(.white), lineWidth: 2.0)
+                            )
+                            .background(Color.black.opacity(0.7))
+                            .clipShape(Circle())
+                        
+                        Image("mushroom")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .overlay(
+                                Circle()
+                                .strokeBorder(Color(.white), lineWidth: 2.0)
+                            )
+                            .background(Color.black.opacity(0.7))
+                            .overlay(content: {
+                                Text("+3")
+                                    .font(.title2)
+                                    .bold()
+                                    .frame(width: 80, height: 80)
+                                    .overlay(
+                                        Circle()
+                                        .strokeBorder(Color(.white), lineWidth: 2.0)
+                                    )
+                                    .background(Color.black.opacity(0.7))
+                                    .foregroundColor(.white)
+                                    .clipShape(Circle())
+                            })
+                            .clipShape(Circle())
+                            .offset(x: -40)
+                        
+                        Spacer()
+                    }
+                    .offset(y: -50)
+                    .padding(.horizontal, 20)
+                    
+                    // Rating and Hourly Rate
+                    HStack(spacing: 4) {
+                        Image(systemName: "star.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.yellow)
+                        Text("\((user.rating ?? 0).cleanValue)")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.primary) // Adapts to Dark Mode
+                        Text("(\(user.ratingCount ?? 0))")
+                            .font(.title)
+                            .foregroundColor(.secondary) // Adapts to Dark Mode
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+
+                    HStack {
+                        Image(systemName: "flame.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 30)
+                            .foregroundColor(.red)
+                        Text("\((user.servicePricing ?? 0).cleanValue)/1Hr")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.primary) // Adapts to Dark Mode
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer(minLength: 30)
+                } else {
+                    Text("SocioGame")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .font(.largeTitle)
                 }
-
-                Image(systemName: "checkmark.seal.fill")
-                    .foregroundColor(.blue)
-
-                Spacer()
-
-                Image(systemName: "instagram")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.pink)
             }
-            .padding(.horizontal)
-
-            // Game Badges
-            HStack(spacing: 8) {
-                Image("dice")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .clipShape(Circle())
-
-                Image("mushroom")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .clipShape(Circle())
-
-                Text("+3")
-                    .font(.caption)
-                    .bold()
-                    .frame(width: 50, height: 50)
-                    .background(Color.black.opacity(0.7))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+            .ignoresSafeArea()
+            .background(Color(.systemBackground)) // Adapts to Light or Dark mode
+            .sheet(isPresented: $isImagePickerPresented) {
+                ImagePicker(selectedImage: $selectedImage) // Open ImagePicker
             }
-            .padding(.horizontal)
-
-            // Rating and Hourly Rate
-            HStack {
-                HStack(spacing: 4) {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                    Text("4.9")
-                        .bold()
-                        .foregroundColor(.primary) // Adapts to Dark Mode
-                    Text("(61)")
-                        .foregroundColor(.secondary) // Adapts to Dark Mode
-                }
-
-                Spacer()
-
-                HStack {
-                    Image(systemName: "flame.fill")
-                        .foregroundColor(.red)
-                    Text("110.00/1Hr")
-                        .font(.headline)
-                        .bold()
-                        .foregroundColor(.primary) // Adapts to Dark Mode
+            .onChange(of: selectedImage) {
+                guard selectedImage != selectedImageNew else { return }
+                uploadProfileImage(userId: "7inLAHiTAkmJ1k1Nh98n", profileImage: selectedImage!) // Upload new image profile
+            }
+            .onChange(of: viewModel.user?.profileImageBase64) {
+                selectedImageNew = base64ToImage(base64String: viewModel.user?.profileImageBase64 ?? "")
+                if let selectedImageNew {
+                    selectedImage = selectedImageNew // Update image profile base on fetch profile image data
                 }
             }
-            .padding(.horizontal)
-        }
-        .padding()
-        .background(Color(.systemBackground)) // Adapts to Light or Dark mode
-        .cornerRadius(20)
-        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
-        .frame(maxWidth: .infinity, alignment: .center)
-        .padding()
-        .sheet(isPresented: $isImagePickerPresented) {
-            ImagePicker(selectedImage: $selectedImage) // Open ImagePicker
+            .onChange(of: viewModel.users.count) {
+                print(viewModel.users) // Print out filtered users based on filtered queries
+            }
+            .onAppear {
+                DispatchQueue.main.async {
+                    viewModel.fetchUserData(userId: "7inLAHiTAkmJ1k1Nh98n") // Fetch account data
+                    viewModel.fetchFilteredUsers() // Fetch filtered user based on query
+                }
+            }
+        
         }
     }
 }
+

@@ -18,7 +18,6 @@
 		E68280FF2CFEA37300752888 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68280FE2CFEA37300752888 /* ImagePicker.swift */; };
 		E68281012CFEA3EB00752888 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68281002CFEA3EB00752888 /* UserManager.swift */; };
 		E68281052CFEA49C00752888 /* UploadProfilePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68281042CFEA49C00752888 /* UploadProfilePhoto.swift */; };
-		E68281082CFEB2CD00752888 /* Readme-Interview-Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68281072CFEB2CD00752888 /* Readme-Interview-Answers.swift */; };
 		E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */; };
 		E6A5B7C82CFE071C0001C8A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */; };
 		E6A5B7CA2CFE071E0001C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */; };
@@ -27,6 +26,7 @@
 		E6A5B7E12CFE071F0001C8A7 /* SocioGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7E02CFE071F0001C8A7 /* SocioGameUITests.swift */; };
 		E6A5B7E32CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */; };
 		E6A5B7F02CFE077C0001C8A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */; };
+		E6E339262CFFF1C0007BABD1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E339252CFFF1C0007BABD1 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		E68281002CFEA3EB00752888 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		E68281042CFEA49C00752888 /* UploadProfilePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePhoto.swift; sourceTree = "<group>"; };
 		E68281062CFEA4F700752888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E68281072CFEB2CD00752888 /* Readme-Interview-Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Readme-Interview-Answers.swift"; sourceTree = "<group>"; };
 		E6A5B7C22CFE071C0001C8A7 /* SocioGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocioGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A5B7C52CFE071C0001C8A7 /* SocioGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameApp.swift; sourceTree = "<group>"; };
 		E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		E6A5B7E02CFE071F0001C8A7 /* SocioGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameUITests.swift; sourceTree = "<group>"; };
 		E6A5B7E22CFE071F0001C8A7 /* SocioGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocioGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6A5B7EF2CFE077C0001C8A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6E339252CFFF1C0007BABD1 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +170,7 @@
 		E68280FD2CFEA36900752888 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E6E339252CFFF1C0007BABD1 /* Global.swift */,
 				E68280FE2CFEA37300752888 /* ImagePicker.swift */,
 			);
 			path = Helper;
@@ -213,7 +214,6 @@
 				E6A5B7C72CFE071C0001C8A7 /* ContentView.swift */,
 				E6A5B7C92CFE071E0001C8A7 /* Assets.xcassets */,
 				E6A5B7CB2CFE071E0001C8A7 /* Preview Content */,
-				E68281072CFEB2CD00752888 /* Readme-Interview-Answers.swift */,
 			);
 			path = SocioGame;
 			sourceTree = "<group>";
@@ -491,8 +491,8 @@
 				E68280FC2CFE9EA400752888 /* UserView.swift in Sources */,
 				E68280FF2CFEA37300752888 /* ImagePicker.swift in Sources */,
 				E6A5B7C62CFE071C0001C8A7 /* SocioGameApp.swift in Sources */,
-				E68281082CFEB2CD00752888 /* Readme-Interview-Answers.swift in Sources */,
 				E68280F62CFE9CFC00752888 /* UserJSON.swift in Sources */,
+				E6E339262CFFF1C0007BABD1 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

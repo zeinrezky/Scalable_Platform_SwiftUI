@@ -23,9 +23,13 @@ enum GenderEnum: Int, Codable {
 struct UserJSON: Codable {
 
     var uid: String?
+    var name: String?
     var email: String?
     var phoneNumber: String?
     var gender: GenderEnum?
     var servicePricing: Double?
     var rating: Double?
+    var ratingCount: Int?
+    var lastActive: String?
+    var profileImageBase64: String?
 }
